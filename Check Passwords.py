@@ -18,7 +18,7 @@ def takePasswords(pwdList):
     for i in range(0,len(pwdList)):
         count = checkPassword(pwdList[i])
         if count:
-            print('"',pwdList[i],'" %d times occurrences'%(count))
+            print("Change your password : '",pwdList[i],"' %d times occuried"%(count))
         else:
             print(pwdList[i], "was not found")
         time.sleep(0.1)
@@ -41,3 +41,7 @@ elif choice == 2:
         pwdList.append(pwd)
         pwd=str(input())
     takePasswords(pwdList)
+
+print("15 seconds to exit")
+time.sleep(10)
+print("Exiting")
