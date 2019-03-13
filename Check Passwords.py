@@ -2,7 +2,7 @@ import hashlib
 import requests
 import time
 
-def checkPassword(pwd)
+def checkPassword(pwd):
     sha1pwd = hashlib.sha1(pwd.encode('ascii')).hexdigest().upper()
     head, tail = sha1pwd[:5], sha1pwd[5:]
     url = 'https://api.pwnedpasswords.com/range/' + head
